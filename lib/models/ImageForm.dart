@@ -1,11 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:equatable/equatable.dart';
 
-class ImageForm {
-  Image image;
-  bool isEmpty;
+class ImageForm extends Equatable {
+  final String imagePath;
+  final bool isEmpty;
 
   ImageForm({
-    this.image ,
+    this.imagePath,
     this.isEmpty = false,
   });
+
+  @override
+  List<Object> get props => [imagePath, isEmpty];
 }
